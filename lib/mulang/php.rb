@@ -1,5 +1,4 @@
 require 'ast'
-require 'parser/current'
 require 'mumukit/core'
 
 require_relative "./php/version"
@@ -11,7 +10,7 @@ module Mulang
     end
 
     def self.language
-      Mumukit::Language::External.new { |it| parse(it) }
+      Mulang::Language::External.new { |it| parse(it) }
     end
   end
 end
